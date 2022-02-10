@@ -20,6 +20,17 @@ const App = () => {
     searchArticles();
   }, [category]);
 
+  /*
+  useEffect(() => {
+    const searchArticles = () => {
+      const url = `${URLBASE}/top-headlines?country=${COUNTRY}&category=${category}&apiKey=${APIKEY}`;
+      fetch(url)
+        .then((response) => response.json())
+        .then((data) => setArticles(data.articles));
+    };
+    searchArticles();
+  }, [category]);
+  */
   return (
     <>
       <Header />
