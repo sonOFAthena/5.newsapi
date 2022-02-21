@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState } from "react"
 import { Form } from "react-bootstrap";
 
-const useSelect = (initialState, options, label) => {
-  const [state, setState] = useState(initialState);
+const useSelect = (initialState , options, label) => {
+  const [state, setState] = useState(initialState);  
+  
   const select = () => (
     <>
       <Form.Label>{label}</Form.Label>
@@ -13,7 +14,8 @@ const useSelect = (initialState, options, label) => {
       </Form.Select>
     </>
   );
+
   return [state, select];
-};
+}
 
 export default useSelect;
